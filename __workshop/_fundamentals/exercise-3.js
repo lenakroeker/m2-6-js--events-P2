@@ -19,7 +19,24 @@ const people = [
 
 function fullName(peopleArr) {
   // return something
+  let fullNames = [];
+  for (let i = 0; i < peopleArr.length; i++) {
+    let full = "";
+    if ("first" in peopleArr[i].name) {
+      full += `${peopleArr[i]["name"]["first"]} `;
+    }
+    if ("middle" in peopleArr[i].name) {
+      full += `${peopleArr[i]["name"]["middle"]} `;
+    }
+    if ("last" in peopleArr[i].name) {
+      full += `${peopleArr[i]["name"]["last"]}`;
+    }
+    fullNames.push(full)
+  }
+  return fullNames;
 }
+
+
 
 // 2. Do a console.log to verify your function.
 

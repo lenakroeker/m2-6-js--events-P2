@@ -87,6 +87,20 @@ const staffMembers = [
 
 const getData = (arr, key, val) => {
   // return something
+  let finalArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (key === "sql" || key === "python" || key === "javascript") {
+      if (arr[i]["skillLevels"][key] >= val) {
+        console.log(arr[i]);
+        finalArr.push(arr[i]);
+      }
+    }
+    else if (arr[i][key] === val) {
+      console.log(arr[i]);
+      finalArr.push(arr[i]);
+    }
+  }
+  return finalArr;
 };
 
 // 2. Do a console.log to verify your function.

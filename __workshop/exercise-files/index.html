@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="style.css" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <title>Signup Form</title>
-  </head>
-  <body>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Jost:400,700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <title>Signup Form</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <form autocomplete="on">
+      <h1>Signup Form</h1>
+      <div class="right" id="namediv">
+        <label for="name">Full name:</label>
+        <input class="inputbox" type="text" id="name" required>
+      </div>
+      <div class="right" id="addressdiv">
+        <label for="address">Street address</label>
+        <input class="inputbox" type="text" id="address" required>
+      </div>
+      <div class="right" id="emaildiv">
+        <label for="email">Email address</label>
+        <input class="inputbox" type="email" id="email" required>
+      </div>
+      <div class="right" id="phonediv">
+        <label for="phone">Phone number</label>
+        <input class="inputbox" type="tel" id="tel" name="tel" required>
+      </div>
+      <div class="right" id="pass1div">
+        <label for="pass">Password</label>
+        <input min-length="10" type="password" id="pass1" required>
+      </div>
+      <div class="right" id="pass2div">
+        <label for="passconf">Confirm Password</label>
+        <input min-length="10" type="password" id="pass2" required>
+      </div>
+      <div id="termsdiv">
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to the <a href="#">terms of service</a></label>
+      </div>
+
+      <div id="error">
+        <p id="errormsg">passwords do not match</p>
+      </div>
+
+      <footer id="btndiv">
+        <input class="button" type="Reset" value="Clear" id="clear">
+        <input class="button" type="submit" value="Submit" id="submit">
+      </footer>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
